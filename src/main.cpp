@@ -1,10 +1,9 @@
-#include "PE_problem2.h"
-
-using namespace std;
+#include "PE_Problem4.h"
 
 int main(int argc, const char* argv[]){
 
-	problem2::calculateEvenFiboSeq();
+
+	problem4::getLargestPalindrome();
 
 	return 0;
 }
