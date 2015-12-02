@@ -1,10 +1,9 @@
-#include "PE_Problem7.h"
+#include "PE_Problem8.h"
+
 
 int main(int argc, const char* argv[]){
 
-	int primeNumCount = 10001;
-
-	problem7::findPrimeNumberAt(primeNumCount);
+	problem8::findLargestInString();
 
 	return 0;
 }
