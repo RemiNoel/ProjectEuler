@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <iostream>
 #include <math.h>
+#include <sstream>
 
 bool utilities::isPrime(int testNumber){
 	if (testNumber < 0)
@@ -24,4 +25,23 @@ bool utilities::isPrime(int testNumber){
 		}
 	}
 	return true;
+}
+
+std::vector<std::string> utilities::splitString(std::string stringIn, char character){
+	std::stringstream ss(stringIn);
+	std::vector<std::string> listOut;
+
+	std::string tempString;
+
+	while (std::getline(ss, tempString, character)){
+		listOut.push_back(tempString); 
+	}
+	return listOut;
+}
+
+std::string utilities::intToString(int numberToTransform){
+	std::stringstream ss;
+	ss << numberToTransform;
+
+	return ss.str();
 }

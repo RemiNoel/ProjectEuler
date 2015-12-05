@@ -1,9 +1,9 @@
-#include "PE_Problem8.h"
+#include "PE_Problem13.h"
 
 
 int main(int argc, const char* argv[]){
 
-	problem8::findLargestInString();
+	problem13::findFirstNDigitsOfSum(10);
 
 	return 0;
 }
