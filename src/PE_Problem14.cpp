@@ -1,6 +1,5 @@
 #include "PE_Problem14.h"
 #include <iostream>
-#include <vector>
 
 
 void problem14::findLargestChainNumberUnderN(int N){
@@ -14,7 +13,14 @@ void problem14::findLargestChainNumberUnderN(int N){
 		tempChainCount = 1;
 
 		while (tempNumber > 1){
-			tempNumber = problem14::findCollatzNextSeq(tempNumber);
+			//Collatz chain sequence
+			if (tempNumber % 2 == 0){
+				tempNumber = tempNumber / 2;
+			}
+			else{
+				tempNumber = (3 * tempNumber) + 1;
+			}
+
 			tempChainCount++;
 		}
 
@@ -26,15 +32,6 @@ void problem14::findLargestChainNumberUnderN(int N){
 		}
 	}
 	problem14::printLargestNumberChain(startingChainNumber, N);
-}
-
-__int64 problem14::findCollatzNextSeq(__int64 testNumber){
-	if (testNumber % 2 == 0){
-		return testNumber / 2;
-	}
-	else{
-		return (3 * testNumber) + 1;
-	}
 }
 
 void problem14::printLargestNumberChain(__int64 largestChainNumber, int N){

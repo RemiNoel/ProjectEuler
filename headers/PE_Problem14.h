@@ -19,7 +19,6 @@ Which starting number, under one million, produces the longest chain?
 namespace problem14{
 
 	void findLargestChainNumberUnderN(int N);
-	__int64 findCollatzNextSeq(__int64 testNumber);
 	void printLargestNumberChain(__int64 largestChainNumber, int N);
 }
 
