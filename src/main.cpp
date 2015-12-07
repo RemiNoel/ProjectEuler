@@ -1,9 +1,9 @@
-#include "PE_Problem14.h"
+#include "PE_Problem15.h"
 
 
 int main(int argc, const char* argv[]){
 
-	problem14::findLargestChainNumberUnderN(1000000);
+	problem15::findNumberOfWaysInGrid(20);
 
 	return 0;
 }
