@@ -1,9 +1,9 @@
-#include "PE_Problem15.h"
+#include "PE_Problem16.h"
 
 
 int main(int argc, const char* argv[]){
 
-	problem15::findNumberOfWaysInGrid(20);
+	problem16::findPowerSumDigits(2, 1000);
 
 	return 0;
 }

@@ -38,10 +38,3 @@ std::vector<std::string> utilities::splitString(std::string stringIn, char chara
 	}
 	return listOut;
 }
-
-std::string utilities::intToString(int numberToTransform){
-	std::stringstream ss;
-	ss << numberToTransform;
-
-	return ss.str();
-}
