@@ -11,6 +11,7 @@
 
 from math import sqrt
 import time
+
 def d(n):
 	sumOfdiv = 0
 	for i in range(1,n):
