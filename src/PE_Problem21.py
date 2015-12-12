@@ -9,8 +9,9 @@
 #	if d(a) == b and a != b and d(b) == a :
 #		imcablepair++
 
-from math import floor, sqrt
+from math import sqrt
 import time
+
 def d(n):
 	sumOfdiv = 0
 	for i in range(1,n):
