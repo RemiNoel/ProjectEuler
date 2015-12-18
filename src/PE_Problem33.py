@@ -7,32 +7,26 @@
 # two digits in the numerator and denominator.
 #
 # If the product of these four fractions is given in its lowest common terms, find the value of the denominator.
-import pdb
 
+from fractions import gcd
+
+# all solutions will have the form (10*nom + i)/(10*i + den) = nom/den, where i is the number we want to cancel
 
 def main():
 	# find denominator product of the special fractions
 	denProduct = 1
-	tempDigit = 0
+	nomProduct = 1
+	
+	for i in range(1, 10):
+		for den in range(1, i):
+			for nom in range(1, den):
+				if (nom * 10 + i) * den == nom * (i * 10 + den):
+					denProduct *= den
+					nomProduct *= nom
 
-	for num in range (10, 100):
-		for den in range(num + 1, 100):
-			if den % 10 != 0:
-				listNum = [num // 10, num % 10]
-				listDen = [den // 10, den % 10]
-				
-				# check in the list of num if one of the digits in listNum are the same and not both(all) the same
-				# if True, remove it from the fraction. Then multiply the denominator(remaining digit in denList (pos 0)) to denProduct
-				if any(i in listDen for i in listNum) and not all(i in listDen for i in listNum):
-					if listNum[0] in listDen:
-						tempDigit = listNum[0]
-					else:
-						tempDigit = listNum[1]
-					listNum.remove(tempDigit)
-					listDen.remove(tempDigit)
+	# Now we must reduce the resulting fraction to the lowest common terms
+	denProduct /= gcd(nomProduct, denProduct)
 
-					if listNum[0] / listDen[0] == num/den:
-						denProduct *= listDen[0]
 	print(denProduct)		
 
 if __name__== '__main__':
