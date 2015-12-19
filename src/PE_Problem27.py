@@ -30,7 +30,7 @@ def isPrime(num):
 	for i in range(3, int(math.sqrt(num)) + 1, 2):
 		if num % i == 0:
 			return False
-	return True;
+	return True
 
 def main():
 	bestA, bestB, bestCount = 0, 0, 0
