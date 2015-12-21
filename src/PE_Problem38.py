@@ -14,7 +14,7 @@
 #	the concatenated product of an integer with (1,2, ... , n) where n > 1?
 
 def isPandigital(num):
-	return len(str_num) == 9 and not '1234567890'[:9].strip(str(num))
+	return len(str(num)) == 9 and not '1234567890'[:9].strip(str(num))
 
 def concatenate(num, doubleNum):
 	return int(str(num) + str(doubleNum))
