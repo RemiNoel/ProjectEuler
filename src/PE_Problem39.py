@@ -38,8 +38,6 @@ If we maximise a and b, c will also be maximised
 
 '''
 
-import math
-
 def main():
 	highestPer = 0
 	highestNumSolutions = 0
